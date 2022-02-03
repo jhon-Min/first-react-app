@@ -9,7 +9,8 @@ const InputCard = (props) => {
   };
 
   const enterPrice = (e) => {
-    setPrice(e.target.value);
+    let price = Number(e.target.value);
+    setPrice(price);
   };
 
   const submitHandler = (e) => {
@@ -35,6 +36,7 @@ const InputCard = (props) => {
               onChange={enterTitle}
               className="form-control"
               placeholder="Title"
+              required
             />
           </div>
 
@@ -47,6 +49,7 @@ const InputCard = (props) => {
               onChange={enterPrice}
               className="form-control"
               placeholder="Price"
+              required
             />
           </div>
 
